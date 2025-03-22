@@ -147,18 +147,17 @@ public class TunerCategoryActivity extends GravityBoxListActivity implements
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
-            case R.id.menu_show_all:
-                mShowActiveOnly = false;
-                setData();
-                return true;
-            case R.id.menu_show_active:
-                mShowActiveOnly = true;
-                setData();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.menu_show_all) {
+            mShowActiveOnly = false;
+            setData();
+            return true;
+        } else if (itemId == R.id.menu_show_active) {
+            mShowActiveOnly = true;
+            setData();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
