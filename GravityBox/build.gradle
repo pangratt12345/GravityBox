@@ -1,22 +1,24 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 28
+    namespace "com.ceco.oreo.gravitybox"
+//    compileSdkVersion 28
+    compileSdk 34
     defaultConfig {
         applicationId "com.ceco.oreo.gravitybox"
-        minSdkVersion 26
+        minSdkVersion 27
         //noinspection OldTargetApi
-        targetSdkVersion 27
+        targetSdkVersion 34
     }
     buildTypes {
         debug {
             minifyEnabled false
-            useProguard false
+//            useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
         }
         release {
             minifyEnabled true
-            useProguard false
+//            useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
         }
