@@ -1,17 +1,25 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        maven { url 'https://maven.google.com' } // For Gradle < 4.0
+//        maven { url 'https://repo.xposed.info/releases' } // inaccessible Xposed repository as of 2025
+        maven { url 'https://api.xposed.info/' } // accessible Xposed repository as of 2025
+        google() // For Gradle 4.0+
+        mavenCentral()
         jcenter()
-        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:8.5.0'
     }
 }
 
 allprojects {
     repositories {
+        maven { url 'https://maven.google.com' } // For Gradle < 4.0
+//        maven { url 'https://repo.xposed.info/releases' } // inaccessible Xposed repository as of 2025
+        maven { url 'https://api.xposed.info/' } // accessible Xposed repository as of 2025
+        google() // For Gradle 4.0+
+        mavenCentral()
         jcenter()
-        google()
     }
 }
