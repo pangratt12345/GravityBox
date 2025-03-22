@@ -415,7 +415,7 @@ public class QuickAppTile extends QsTile {
             mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             mDialog.setContentView(appView);
             mDialog.setCanceledOnTouchOutside(true);
-            mDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_STATUS_BAR_PANEL);
+            mDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_STATUS_BAR);
             int pf = XposedHelpers.getIntField(mDialog.getWindow().getAttributes(), "privateFlags");
             pf |= 0x00000010;
             XposedHelpers.setIntField(mDialog.getWindow().getAttributes(), "privateFlags", pf);
